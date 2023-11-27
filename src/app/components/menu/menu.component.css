@@ -1,0 +1,81 @@
+/* MENU PAGE ************ */
+
+.menu_background_image {
+    background-image: url("src/assets/images/menu_bg.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+}
+
+.main-heading-container {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.main_heading {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 9rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .main_heading {
+        font-size: 3rem;
+    }
+}
+
+
+/*************SECTION OF MENU ************** */
+
+.menu_section {
+    background: black;
+    height: auto;
+}
+
+.menu_text {
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menu_text h6 {
+    font-size: 18px;
+}
+
+
+.menu_text h1 {
+    font-size: 38px;
+}
+
+.menu_image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.each_menu {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    margin-bottom: 80px;
+    max-width: 35%;
+    max-height: 30%;
+    /* Adding zoomable hover also */
+    transition: transform 0.3s;
+    cursor: pointer;
+
+}
+
+.each_menu:hover {
+    transform: scale(1.1);
+}
+
+
+/* ******************************* */

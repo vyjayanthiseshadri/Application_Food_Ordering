@@ -1,0 +1,10 @@
+<div>
+    <input type="text" placeholder="Search Food from MasterChef" [(ngModel)]="searchItem" (change)="search()">
+    <button (click)="search()">Search</button>
+</div>
+
+<!-- Here in Search bar , the values entered are 2 way binded to searchItem -->
+<!-- And we have used (change) method because when we type food name in the search bar 
+     and press enter also the items should be displayed -->
+<!-- We are using (click) method as after typing the food item in the search bar 
+    and clicking on search , the filtered items should be displayed -->

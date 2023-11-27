@@ -1,0 +1,61 @@
+ul {
+    position: relative; right: -20px; bottom:30px;
+    cursor: pointer;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* Adjusting the max width to take up the entire viewport */
+    padding: 0 20px;
+}
+
+.logo img {
+    max-width: 150px; /* Setting a maximum width for the logo */
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; /* Adjusting the spacing between menu items */
+    
+}
+
+
+
+button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.25rem;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+    }
+
+    nav ul li {
+        margin: 10px 0; 
+    }
+
+    .logo img {
+        width: 100%; 
+        max-width: none; /* Removing the maximum width on smaller screens */
+    }
+}

@@ -1,0 +1,108 @@
+/* FOOTER ********* */
+
+#footer {
+    background-color: beige;
+    height: auto;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    padding: 20px 0;
+}
+
+.container_footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.image_text_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    /* text-decoration: underline; */
+}
+
+.logo {
+
+    align-content: center;
+    margin-top: 40px;
+    max-width: 10%;
+    max-height: 10%;
+
+}
+
+.text_heading_container {
+    margin-top: 34px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 30px;
+    line-height: 2;
+    text-align: left;
+}
+
+.address,
+.social-media,
+.contact-details,
+.business-hours {
+    flex: 1;
+    margin: 10px;
+
+}
+
+.address,
+.social-media,
+.contact-details,
+.business-hours p {
+    font-size: 20px;
+
+}
+
+.footer_ul {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.footer_li {
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .address,
+    .social-media,
+    .contact-details,
+    .business-hours {
+        flex: 1;
+        margin: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo {
+
+        align-content: center;
+        margin-top: 40px;
+        max-width: 20%;
+        max-height: 20%;
+
+    }
+}

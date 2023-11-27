@@ -1,0 +1,170 @@
+/* Header Component background image */
+.header_image {
+    background-image: url("src/assets/images/testimonials_backgroud.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto; 
+}
+
+/* Details heading */
+
+.main-heading-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.main_heading {
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    font-size: 6rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .main_heading {
+        font-size: 3rem;
+    }
+}
+
+/* ********Sorting********* */
+
+.sort-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sort {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling the dropdown arrow */
+select::-ms-expand {
+    display: none;
+}
+
+/* Styling the dropdown options */
+option {
+    padding: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Highlighting the selected option */
+option:checked {
+    background-color: #5b6062;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .sort-container {
+        flex-direction: column;
+    }
+
+    .sort {
+        margin: 10px 0;
+    }
+}
+
+
+/* ***************** */
+
+
+/* List of Food Items */
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+
+}
+
+ul li .food_cards {
+    height: 22rem;
+    width: 20rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #e72929;
+    text-decoration: none;
+    box-shadow: 5px 5px black;
+    padding: 0px;
+    cursor: pointer;
+}
+
+* {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+li .food_cards:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.content {
+    padding: .5rem 1 rem;
+    position: relative;
+
+}
+
+.favorite {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    font-size: 1.2rem;
+}
+
+.favorite.not {
+    color: black;
+}
+
+.star {
+    margin-bottom: .2rem;
+}
+
+.product-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.origins {
+    flex: 12;
+}
+
+.origins span {
+    border-radius: 2rem;
+    background-color: whitesmoke;
+    color: gray;
+    font-size: .9rem;
+    margin-right: .3rem;
+    display: inline-block;
+}
+
+.price {
+    padding-top: 12px;
+}
+
+.food_cards img {
+    height: 225px;
+}

@@ -1,0 +1,76 @@
+<header>
+    <div class="header_image">
+        <!-- HEADER COMPONENT GOES HERE -->
+        <app-header></app-header>
+        <!-- *** -->
+
+        <!-- Heading of the page goes here -->
+        <div class="main-heading-container">
+            <h1 class="main_heading">ORDERS</h1>
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+    <div>
+        <!-- SEARCH COMPONENT GOES HERE -->
+        <app-search></app-search>
+
+        <!-- ***SORTING*** -->
+        <div class="sort-container">
+            <p class="sort">Sort:</p>
+            <select #sortSelect (change)="sortProducts(sortSelect.value)">
+                <!-- Sorting based on price -->
+                <option value="priceAsc">Price (Low to High)</option>
+                <option value="priceDesc">Price (High to Low)</option>
+            </select>
+            <select #sortSelect_rating (change)="sortProducts_rating(sortSelect_rating.value)">
+                <!-- Sorting based on Rating -->
+                <option value="ratingAsc">Rating (Low to High)</option>
+                <option value="ratingDesc">Rating (High to Low)</option>
+            </select>
+        </div>
+        <!-- ***TAG COMPONENT GOES HERE*** -->
+        <app-tags></app-tags>
+        <br><br>
+
+        <!-- ***NOT-FOUND COMPONENT GOES HERE*** -->
+        <app-not-found [visible]="!foods || foods.length <= 0"></app-not-found>
+        <!-- ******** -->
+
+        <body>
+            <ul>
+                <!-- Details of all the food items -->
+                <li *ngFor="let food of foods">
+                    <div class="food_cards" (click)="navigateToFood(food.id)">
+                        <img src="{{food.imageUrl}}" alt="food images">
+                        <div class="content">
+                            <!-- Food Name -->
+                            <div class="name">
+                                {{food.name}}
+                            </div>
+                            <span class="favorite {{food.favorite?'':'not'}}">❤</span>
+                            <app-star-rating [(value)]=food.star></app-star-rating>
+                            <div class="product-item-footer">
+                                <div class="origins">
+                                    <span *ngFor="let origin of food.origins">
+                                        {{origin}}
+                                    </span>
+                                </div>
+                                <div class="cook-time">
+                                    <span>⏱</span>
+                                    {{food.cookTime}}
+                                </div>
+                            </div>
+                            <div class="price">
+                                <!-- <span>&#8377;</span> -->
+                                {{food.price| currency}}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </body>
+    </div>
+
+    <!--**FOOTER COMPONENT GOES HERE* -->
+    <!-- <app-footer></app-footer> -->
+    <!-- ******END****** -->
